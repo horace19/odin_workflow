@@ -20,6 +20,114 @@
     const input = document.querySelector('.numberInput');
     const para = document.querySelector('p');
 
+    function squared(num) {
+      return num * num;
+    }
+
+    function cubed(num) {
+      return num * num * num;
+    }
+
+    function factorial(num) {
+      if (num < 0) return undefined;
+      if (num === 0) return 1;
+      let x = num - 1;
+      while (x > 1) {
+        num *= x;
+        x--;
+      }
+      return num;
+    }
+
+    function circumference(num) {
+      return num * 2 * 3.14;
+    }
+
+    input.addEventListener("change", () => {
+    const num = parseFloat(input.value);
+    if (isNaN(num)) {
+      para.textContent = "You need to enter a number!";
+    } else {
+      para.textContent = `${num} squared is ${squared(num)}. `;
+      para.textContent += `${num} cubed is ${cubed(num)}. `;
+      para.textContent += `${num} factorial is ${factorial(num)}. `;
+      para.textContent += `Circumference of a circle with ${num} as radius is ${circumference(num)}. `;
+    }
+  });
+
+  let add7 = add7Num => add7Num + 7;
+  let multiply = (num1, num2) => num1 * num2;
+  function capitalize(word) {
+    let firstChar = word.slice(0, 1);
+    let otherChar = word.slice(1);
+    return firstChar.toUpperCase() + otherChar.toLowerCase();
+  }
+
+  for (num = 1; num <= 100; num++){
+  switch(true){
+    case (num % 3 == 0 && num % 5 == 0):
+        console.log("FizzBuzz");
+        break;
+    case (num % 3 == 0):
+        console.log("Fizz");
+        break;
+    case (num % 5 == 0):
+        console.log("Buzz");
+        break;
+    default:
+        console.log(num);
+        break;
+    }
+
+    for (num = 1; num <= 100; num++){
+      let string = "";
+      if (num % 3 == 0) string += "Fizz";
+      if (num % 5 == 0) string += "Buzz";
+      console.log(string || num);
+    }
+
+    let size = 8;
+    let grid = "";
+    for (y = 1; y <= size; y ++) {
+      for (x = 1; x <= size; x ++) {
+        if ((x + y) % 2 == 0) grid += " ";
+        else grid += "#";
+      }
+      grid += "\n";
+    }
+    console.log(grid);
+
+    function capitalize(word) {
+      let firstL = word.slice(0, 1);
+      let otherL = word.slice(1);
+      console.log(firstL.toUpperCase() + otherL.toLowerCase());
+    }
+    capitalize("");
+
+    let newNum = +prompt("Please give me the first number");
+    let largestNum = newNum;
+    for (count = 2; count <= 10; count++) {
+      newNum = +prompt(`Please give me the ${2} number`);
+      (newNum > largestNum) ? largestNum = newNum;
+    }
+    console.log("The largest number is" + largestNum);
+    /*Prompt a number & store in newNum;
+    compare newNum to largestNum;
+    store larger one in largest;
+    console.log*/
+
+    
+    let newNum = +prompt("Please give me the first number");
+    let largestNum = newNum;
+    for (count = 2; count <= 10; count++) {
+      newNum = +prompt(`Please give me the ${count} number`);
+      largestNum = (newNum > largestNum) ? newNum : largestNum;
+    }
+    console.log(`The largest number is ${largestNum}`)
+}
   </script>
+  <p>
+    create a variable called name fo type type and start with the value initVal;
+    variable; output; input; 
 </body>
 </html>
