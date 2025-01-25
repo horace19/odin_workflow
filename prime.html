@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Prime" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime (num) {
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function calPrime(limit) {
+            for (num = 2; num <= limit; num++) {
+                if (isPrime(num)) console.log(num);
+            }
+        }
+    </script>
+</body>
+</html>
